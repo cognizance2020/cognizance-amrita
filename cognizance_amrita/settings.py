@@ -37,7 +37,7 @@ SECRET_KEY = '8-#5p@b@3_%qb^k%=@g$53cg*fj$=e9)q7ju**0inwmw3ttd93'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cognizance-cms.herokuapp.com','127.0.0.1']
 
 
 # Application definition

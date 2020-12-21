@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Cognizance</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="{% static 'css/Login-Form-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Navigation-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Registration-Form-with-Photo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Simple-Slider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/smoothproducts.css' %}">
+</head>
+
+<body style="background: url({% static 'img/tech/619899.jpg' %});">
+    <nav class="navbar navbar-light navbar-expand-md" style="background: #f5f3f3;">
+        <div class="container-fluid"><a class="navbar-brand" href="#" style="font-weight: bold;background: transparent;color: var(--gray);">Submission</a><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+    </nav>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">{{task.title}}</h4>
+            <h6 class="text-muted card-subtitle mb-2">{{fullname}}</h6>
+            <p class="card-text">You can submit only once. So, kindly check well before submitting.</p>
+        </div>
+    </div>
+    <div class="login-clean" style="height: 100%;background: url({% static 'img/tech/619899.jpg' %});">
+        <form method="post" style="width: 60%;max-width: 60%;">
+        {% csrf_token %}
+            <h2 class="sr-only">Login Form</h2>
+            <div class="form-group" style="padding: 10px;border-radius: 8px;border: 2px solid var(--gray) ;">
+                <p style="font-weight: bold;">Submission text (if any)</p><input class="form-control" type="text" placeholder="Sometimes a link" name="submission_text">
+            </div>
+            <div class="form-group" style="padding: 10px;border-radius: 6px;border: 2px solid var(--gray) ;">
+                <p style="font-weight: bold;">Submission file (if any)</p><input type="file" name="submission_file">
+            </div>
+            <div class="form-group" style="height: auto;"><button class="btn btn-primary btn-block" type="submit" style="background: rgb(254,142,56);border-color: rgb(254,142,56);font-family: ABeeZee, sans-serif;font-weight: bold;margin-top: 30px;">SUBMIT</button></div>
+        </form>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="{% static 'js/smoothproducts.min.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="{% static 'js/Simple-Slider.js' %}"></script>
+</body>
+
+</html>
